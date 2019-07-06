@@ -1,0 +1,31 @@
+﻿  cl : Command line warning D9035 : option 'Gm' has been deprecated and will be removed in a future release
+  Shaders.cpp
+  SceneObject.cpp
+  Generating Code...
+  Compiling...
+  Terrain.cpp
+D:\Cursuri\Gameloft\GameEngine\NewTrainingFramework\SceneObject.cpp(54,20): warning C4018:  '<': signed/unsigned mismatch
+D:\Cursuri\Gameloft\GameEngine\NewTrainingFramework\Terrain.cpp(24,13): warning C4244:  'return': conversion from 'float' to 'int', possible loss of data
+D:\Cursuri\Gameloft\GameEngine\NewTrainingFramework\Terrain.cpp(35,31): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\Cursuri\Gameloft\GameEngine\NewTrainingFramework\Terrain.cpp(82,14): warning C4244:  '=': conversion from 'int' to 'GLfloat', possible loss of data
+D:\Cursuri\Gameloft\GameEngine\NewTrainingFramework\Terrain.cpp(83,13): warning C4244:  '=': conversion from 'int' to 'GLfloat', possible loss of data
+D:\Cursuri\Gameloft\GameEngine\NewTrainingFramework\Terrain.cpp(84,13): warning C4244:  '=': conversion from 'int' to 'GLfloat', possible loss of data
+  Skybox.cpp
+  SceneManager.cpp
+D:\Cursuri\Gameloft\GameEngine\NewTrainingFramework\Terrain.cpp(118,27): warning C4244:  '=': conversion from 'int' to 'float', possible loss of data
+D:\Cursuri\Gameloft\GameEngine\NewTrainingFramework\SceneManager.cpp(66,28): warning C4244:  'argument': conversion from 'double' to 'GLfloat', possible loss of data
+D:\Cursuri\Gameloft\GameEngine\NewTrainingFramework\SceneManager.cpp(69,30): warning C4244:  'argument': conversion from 'double' to 'GLfloat', possible loss of data
+D:\Cursuri\Gameloft\GameEngine\NewTrainingFramework\SceneManager.cpp(72,22): warning C4244:  'argument': conversion from 'double' to 'GLfloat', possible loss of data
+D:\Cursuri\Gameloft\GameEngine\NewTrainingFramework\SceneManager.cpp(75,24): warning C4244:  'argument': conversion from 'double' to 'GLfloat', possible loss of data
+D:\Cursuri\Gameloft\GameEngine\NewTrainingFramework\SceneManager.cpp(78,23): warning C4244:  'argument': conversion from 'double' to 'GLfloat', possible loss of data
+D:\Cursuri\Gameloft\GameEngine\NewTrainingFramework\SceneManager.cpp(143,25): warning C4244:  '=': conversion from 'double' to 'GLfloat', possible loss of data
+D:\Cursuri\Gameloft\GameEngine\NewTrainingFramework\SceneManager.cpp(145,25): warning C4244:  '=': conversion from 'double' to 'GLfloat', possible loss of data
+  ResourceManager.cpp
+D:\Cursuri\Gameloft\GameEngine\NewTrainingFramework\SceneManager.cpp(147,25): warning C4244:  '=': conversion from 'double' to 'GLfloat', possible loss of data
+  NewTrainingFramework.cpp
+D:\Cursuri\Gameloft\GameEngine\NewTrainingFramework\ResourceManager.cpp(85,25): warning C4101:  'path_node': unreferenced local variable
+  Fog.cpp
+  FireObject.cpp
+  Generating Code...
+D:\Cursuri\Gameloft\GameEngine\NewTrainingFramework\NewTrainingFramework.cpp(44,23): warning C4305:  'initializing': truncation from 'double' to 'GLfloat'
+  NewTrainingFramework.vcxproj -> D:\Cursuri\Gameloft\GameEngine\\BIN-Nvidia\NewTrainingFramework.exe

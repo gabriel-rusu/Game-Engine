@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sceneManager>
+
+    <backgroundColor>
+        <r>1.0</r>
+        <g>1.0</g>
+        <b>1.0</b>
+    </backgroundColor>
+
+    <cameras>
+        <camera id="1">
+            <position>
+                <x>0</x>
+                <y>0</y>
+                <z>1</z>
+            </position>
+            <target>
+                <x>0</x>
+                <y>0</y>
+                <z>-1</z>
+            </target>
+            <up>
+                <x>0</x>
+                <y>1</y>
+                <z>0</z>
+            </up>
+            <translationSpeed>40</translationSpeed>
+            <rotationSpeed>0.5</rotationSpeed>
+            <fov>45</fov>
+            <near>0.2</near>
+            <far>15000</far>
+        </camera>
+        <!-- eventual si alte cameras -->
+    </cameras>
+    <activeCamera>1</activeCamera>
+
+
+    <objects>
+        <object id="10">
+            <model>1</model><!-- id model -->
+            <shader>10</shader><!-- id shader -->
+            <type>normal</type>
+            <blend>true</blend>
+            <name>Crocodil_verde</name><!-- optional -->
+            <textures>
+                <texture id="4" />
+            </textures>
+            <position>
+                <!-- translatia -->
+                <x>0</x>
+                <y>-10</y>
+                <z>10</z>
+            </position>
+            <rotation>
+                <x>0</x>
+                <y>0</y>
+                <z>10</z>
+            </rotation>
+            <scale>
+                <x>.05</x>
+                <y>.05</y>
+                <z>.05</z>
+            </scale>
+            <followingCamera>
+                <cameras>
+                    <camera>1</camera>
+                </cameras>
+                <ox />
+                <oy />
+                <oz />
+            </followingCamera>
+            <trajectory type="linear" iteration="infinite" direction="alternate">
+                <!-- startPoint e chiar Pos -->
+                <endPoint>
+                    <x>0.5</x>
+                    <y>100.0</y>
+                    <z>1.0</z>
+                </endPoint>
+                <speed>0.1</speed>
+            </trajectory>
+            <lights>
+                <light>1</light>
+            </lights>
+        </object>
+        <object id="20">
+            <model>1</model><!-- id model -->
+            <shader>10</shader><!-- id shader -->
+            <type>normal</type>
+            <blend>true</blend>
+            <name>Crocodil_verde</name><!-- optional -->
+            <textures>
+                <texture id="4" />
+            </textures>
+            <position>
+                <!-- translatia -->
+                <x>0</x>
+                <y>-7</y>
+                <z>-30</z>
+            </position>
+            <rotation>
+                <x>0</x>
+                <y>0</y>
+                <z>0</z>
+            </rotation>
+            <scale>
+                <x>.05</x>
+                <y>.05</y>
+                <z>.05</z>
+            </scale>
+            <followingCamera>
+                <cameras>
+                    <camera>1</camera>
+                </cameras>
+                <ox />
+                <oy />
+                <oz />
+            </followingCamera>
+            <trajectory type="linear" iteration="infinite" direction="alternate">
+                <!-- startPoint e chiar Pos -->
+                <endPoint>
+                    <x>0.5</x>
+                    <y>100.0</y>
+                    <z>1.0</z>
+                </endPoint>
+                <speed>0.1</speed>
+            </trajectory>
+            <lights>
+                <light>1</light>
+            </lights>
+        </object>
+        <object id="30">
+            <model>generated</model>
+            <shader>3</shader>
+            <type>terrain</type>
+            <offsetY>-6</offsetY>
+            <numberOfCells>64</numberOfCells>
+            <cellDimension>8</cellDimension>
+            <wired />
+            <blend>false</blend>
+            <name>Teren</name>
+            <color>
+                <r>1.0</r>
+                <g>1.0</g>
+                <b>1.0</b>
+            </color>
+            <textures>
+                <texture id="14" />
+                <texture id="15" />
+                <texture id="16" />
+                <texture id="19" />
+                <!--adaugati texturile-->
+            </textures>
+            <position>
+                <x>0</x>
+                <y>-10</y>
+                <z>0</z>
+            </position>
+            <rotation>
+                <x>0.0</x>
+                <y>0.0</y>
+                <z>0.0</z>
+            </rotation>
+            <scale>
+                <x>1.</x>
+                <y>1.</y>
+                <z>1.</z>
+            </scale>
+            <lights>
+                <light>1</light>
+            </lights>
+            <height>
+                <r>1</r>
+                <g>0</g>
+                <b>-1</b>
+            </height>
+        </object>
+        <object id="40">
+            <model>26</model><!-- id model -->
+            <shader>25</shader><!-- id shader -->
+            <type>skybox</type>
+            <blend>true</blend>
+            <name>Skybox</name><!-- optional -->
+            <textures>
+                <texture id="20" />
+            </textures>
+            <position>
+                <x>0</x> <!-- e de fapt offsetul pe x daca obiectul are following Camera pe axa OX -->
+                <y>0</y>
+                <z>0</z>
+            </position>
+            <rotation>
+                <x>3.14</x>
+                <y>0</y>
+                <z>0</z>
+            </rotation>
+            <scale>
+                <x>3000</x>
+                <y>3000</y>
+                <z>3000</z>
+            </scale>
+            <followingcamera>
+                <ox />
+                <oz />
+            </followingcamera>
+            <trajectory type="linear" iteration="infinite" direction="alternate">
+                <!-- startPoint e chiar Pos -->
+                <endPoint>
+                    <x>0.5</x>
+                    <y>100.0</y>
+                    <z>1.0</z>
+                </endPoint>
+                <speed>0.1</speed>
+            </trajectory>
+            <lights>
+                <light>1</light>
+            </lights>
+        </object>
+        <object id="50">
+            <model>3</model><!-- id model -->
+            <shader>2</shader><!-- id shader -->
+            <type>fire</type>
+            <blend>true</blend>
+            <name>Foc</name><!-- optional -->
+            <textures>
+                <texture id="9" />
+                <texture id="10" />
+                <texture id="11" />
+            </textures>
+            <position>
+                <!-- translatia -->
+                <x>0</x>
+                <y>0</y>
+                <z>-100</z>
+            </position>
+            <rotation>
+                <x>0</x>
+                <y>0</y>
+                <z>0</z>
+            </rotation>
+            <scale>
+                <x>2.0</x>
+                <y>2.0</y>
+                <z>2.0</z>
+            </scale>
+            <followingCamera>
+                <cameras>
+                    <camera>1</camera>
+                </cameras>
+                <ox />
+                <oy />
+                <oz />
+            </followingCamera>
+            <trajectory type="linear" iteration="infinite" direction="alternate">
+                <!-- startPoint e chiar Pos -->
+                <endPoint>
+                    <x>0.5</x>
+                    <y>100.0</y>
+                    <z>1.0</z>
+                </endPoint>
+                <speed>0.1</speed>
+            </trajectory>
+            <lights>
+                <light>1</light>
+            </lights>
+            <dispMax>0.3</dispMax>
+        </object>
+    </objects>
+    <fog>
+        <razaMare>50</razaMare>
+        <razaMica>20</razaMica>
+        <culoare>
+            <r>0.901</r>
+            <g>0.901</g>
+            <b>0.980</b>
+        </culoare>
+    </fog>
+    <ambientalLight>
+        <color>
+            <r>1.0</r>
+            <g>1.0</g>
+            <b>1.0</b>
+        </color>
+        <ratio>0.2</ratio>
+    </ambientalLight>
+    <lights>
+        <light id="1">`
+            <associatedObject>2</associatedObject>
+            <diffuseColor>
+                <r>1.0</r>
+                <g>1.0</g>
+                <b>1.0</b>
+            </diffuseColor>
+            <specularColor>
+                <r>1.0</r>
+                <g>1.0</g>
+                <b>1.0</b>
+            </specularColor>
+            <type>point</type>
+        </light>
+    </lights>
+
+    <debugSettings>
+        <objectAxes>
+            <OXColor>
+                <r>1.0</r>
+                <g>0.0</g>
+                <b>0.0</b>
+            </OXColor>
+            <OYColor>
+                <r>0.0</r>
+                <g>1.0</g>
+                <b>0.0</b>
+            </OYColor>
+            <OZColor>
+                <r>0.0</r>
+                <g>0.0</g>
+                <b>1.0</b>
+            </OZColor>
+        </objectAxes>
+        <camAxes>
+            <OXColor>
+                <r>1.0</r>
+                <g>1.0</g>
+                <b>0.0</b>
+            </OXColor>
+            <OYColor>
+                <r>0.0</r>
+                <g>1.0</g>
+                <b>1.0</b>
+            </OYColor>
+            <OZColor>
+                <r>1.0</r>
+                <g>0.0</g>
+                <b>1.0</b>
+            </OZColor>
+        </camAxes>
+    </debugSettings>
+
+</sceneManager>
