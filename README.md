@@ -15,3 +15,8 @@
 
 
 <p align="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A simple game engine that renders a terrain and manages resources.A game engine is the base of every modern game development project. This engine will be extended further into a personal game. The targeted devices are smartphones and tablets because this engine usese OpenGL ES for rendering 2D and 3D vector graphics.</p>
+
+## Built With
+
+* [Visual Studio Comunity 2019](http://www.dropwizard.io/1.0.2/docs/) - free, fully-featured IDE for students, open-source and individual developers.
+* [OpenGL ES](https://www.khronos.org/registry/OpenGL-Refpages/es2.0/) - is a subset of the OpenGL (API) for rendering 2D and 3D computer graphics such as those used by video games.
