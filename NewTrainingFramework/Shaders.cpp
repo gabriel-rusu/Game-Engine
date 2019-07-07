@@ -19,6 +19,13 @@ int Shaders::Init(char * fileVertexShader, char * fileFragmentShader)
 	program = esLoadProgram(vertexShader, fragmentShader);
 	//glUniform1i(textureUniform, 0);
 	//finding location of uniforms / attributes
+	normalAtrib = glGetAttribLocation(program, "a_norm");
+	specPower = glGetUniformLocation(program, "specPower");
+	pozitieLumina = glGetUniformLocation(program, "pozitieLumina");
+	culoareSpeculara = glGetUniformLocation(program, "culoareSpeculara");
+	culoareDifuza = glGetUniformLocation(program, "culoareDifuza");
+	ratio = glGetUniformLocation(program, "ratio");
+	ambientalLight = glGetUniformLocation(program,"ambientalLight");
 	modelM = glGetUniformLocation(program, "modelM");
 	cameraPosition= glGetUniformLocation(program, "cameraPosition");
 	color = glGetUniformLocation(program, "fogColor");

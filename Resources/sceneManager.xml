@@ -280,11 +280,11 @@
             <g>1.0</g>
             <b>1.0</b>
         </color>
-        <ratio>0.2</ratio>
+        <ratio>0.5</ratio>
     </ambientalLight>
     <lights>
-        <light id="1">`
-            <associatedObject>2</associatedObject>
+        <light id="1">
+            <associatedObject>10</associatedObject>
             <diffuseColor>
                 <r>1.0</r>
                 <g>1.0</g>
@@ -295,7 +295,13 @@
                 <g>1.0</g>
                 <b>1.0</b>
             </specularColor>
+            <position>
+                <x>0.0</x>
+                <y>12.0</y>
+                <z>-10.0</z>
+            </position>
             <type>point</type>
+            <specPower>0.8</specPower>
         </light>
     </lights>
 

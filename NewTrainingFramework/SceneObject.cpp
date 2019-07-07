@@ -109,6 +109,33 @@ void SceneObject::sendCommonData()
 		glUniform3f(shaderInc->cameraPosition, c->getPosition().x, c->getPosition().y, c->getPosition().z);
 	if (shaderInc->modelM != -1)
 		glUniformMatrix4fv(shaderInc->modelM, 1, GL_FALSE, (GLfloat *)M.m);
+	std::map<std::string, Lights*> mapLumini = SceneManager::getInstance()->getLights();
+	for (std::map<std::string, Lights*>::iterator it = mapLumini.begin(); it != mapLumini.end(); it++)
+	{
+		if (it->second->idObiectAsociat == this->id)
+		{
+			if (shaderInc->culoareSpeculara != -1)
+				glUniform3f(shaderInc->culoareSpeculara, it->second->culoareSpeculara.x, it->second->culoareSpeculara.y, it->second->culoareSpeculara.z);
+			if (shaderInc->culoareDifuza != -1)
+				glUniform3f(shaderInc->culoareDifuza, it->second->culoareDifuza.x, it->second->culoareDifuza.y, it->second->culoareDifuza.z);
+			if (shaderInc->pozitieLumina != -1)
+				glUniform3f(shaderInc->pozitieLumina, it->second->pozitieLumina.x, it->second->pozitieLumina.y, it->second->pozitieLumina.z);
+			if (shaderInc->specPower != -1)
+				glUniform1f(shaderInc->specPower, it->second->specPower);
+		}
+	}
+	if (shaderInc->normalAtrib != -1)
+	{
+		glEnableVertexAttribArray(shaderInc->normalAtrib);
+		glVertexAttribPointer(shaderInc->normalAtrib, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void *)(sizeof(Vector3)*2));
+	}
+	Vector3 ambientalLight = SceneManager::getInstance()->getAmbientalLight();
+	if(shaderInc->ambientalLight!=-1)
+		glUniform3f(shaderInc->ambientalLight, ambientalLight.x, ambientalLight.y, ambientalLight.z);
+	float ratio = SceneManager::getInstance()->getRatio();
+	if (shaderInc->ratio != -1)
+		glUniform1f(shaderInc->ratio, ratio);
+	
 }
 
 void SceneObject::Update()

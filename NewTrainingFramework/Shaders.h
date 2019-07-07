@@ -22,6 +22,13 @@ public:
 	GLint color;
 	GLint cameraPosition;
 	GLint modelM;
+	GLint culoareSpeculara;
+	GLint culoareDifuza;
+	GLint pozitieLumina;
+	GLint specPower;
+	GLint ambientalLight;
+	GLint ratio;
+	GLint normalAtrib;
 
 	int Init(char * fileVertexShader, char * fileFragmentShader);
 	~Shaders();

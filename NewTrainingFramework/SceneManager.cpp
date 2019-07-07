@@ -17,6 +17,16 @@ SceneManager::SceneManager()
 
 SceneManager*SceneManager::obj = nullptr;
 
+Vector3 SceneManager::getAmbientalLight()
+{
+	return ambientalLight;
+}
+
+float SceneManager::getRatio()
+{
+	return this->ratio;
+}
+
 SceneManager* SceneManager::getInstance()
 {
 	if (!obj)
@@ -47,6 +57,15 @@ bool SceneManager::Init()
 	colors.y = std::stof(color_node->first_node("g")->value());
 	colors.z = std::stof(color_node->first_node("b")->value());
 	glClearColor(colors.x, colors.y, colors.z, 1.0);
+	rapidxml::xml_node<>* lights = root_node->first_node("lights");
+
+	for (rapidxml::xml_node<>* light = lights->first_node("light"); light; light = light->next_sibling())
+	{
+		Lights* l = new Lights();
+		l->readLightsCommonInfo(light);
+		mapLumini[l->idLumina]=l;
+	}
+	
 	rapidxml::xml_node<>* cameras_node = root_node->first_node("cameras");
 	for (rapidxml::xml_node<>* camera_node = cameras_node->first_node("camera"); camera_node; camera_node = camera_node->next_sibling())
 	{
@@ -85,7 +104,11 @@ bool SceneManager::Init()
 	rapidxml::xml_node<>* fog = root_node->first_node("fog");
 	ceata = new Fog();
 	ceata->readSpecificInfo(fog);
-
+	rapidxml::xml_node<>* luminaAmbientala = root_node->first_node("ambientalLight");
+	ambientalLight.x =std::stof(luminaAmbientala->first_node("color")->first_node("r")->value());
+	ambientalLight.y = std::stof(luminaAmbientala->first_node("color")->first_node("g")->value());
+	ambientalLight.z = std::stof(luminaAmbientala->first_node("color")->first_node("b")->value());
+	ratio = std::stof(luminaAmbientala->first_node("ratio")->value());
 	for (rapidxml::xml_node<>* object_node = objects_node->first_node("object"); object_node; object_node = object_node->next_sibling())
 	{
 		SceneObject* so;
@@ -201,4 +224,9 @@ SceneManager::~SceneManager()
 Fog* SceneManager::getFog()
 {
 	return ceata;
+}
+
+std::map<std::string, Lights*> SceneManager::getLights()
+{
+	return mapLumini;
 }

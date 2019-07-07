@@ -11,7 +11,7 @@ varying vec3 v_pos;
 uniform vec3 pozitieLumina;
 uniform vec3 culoareSpeculara;
 uniform vec3 culoareDifuza;
-uniform vec3 ambinetalLight;
+uniform vec3 ambientalLight;
 uniform float ratio;
 uniform float specPower;
 vec3 N;
@@ -33,12 +33,12 @@ void main()
 		alpha = 1.0;
 	else alpha = (d-razaMica)/(razaMare-razaMica);
 	color = vec4(alpha * fogColor + (1.0-alpha) * color.xyz,1.0);
-	vec3 comp_amb = color.xyz * ambinetalLight;
+	vec3 comp_amb = color.xyz * ambientalLight;
 	vec3 c_diff = color.xyz*culoareDifuza * max(dot(N,-L),0.0);
 	vec3 R = normalize(reflect(L,N));
 	vec3 E = normalize(cameraPosition - pozitieLumina);
 	vec3 c_spec = culoareSpeculara * pow(max(dot(R,E),0.0),specPower);
 	vec3 c_final = ratio*comp_amb + (1.0-ratio)*(c_diff - c_spec);
 	gl_FragColor = vec4(c_final,color.a);
-	gl_FragColor = vec4(ambinetalLight,1.0);
+	//gl_FragColor = vec4(culoareDifuza,1.0);
  }
