@@ -20,11 +20,14 @@
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-## Prerequisites
+### Prerequisites
 To run the game engine on your computer you must have:
 * Visual Studio IDE from [Microsoft Website](https://visualstudio.microsoft.com/vs/).
 
 If you already have it just download the full repository and double click on the **NewTrainingFramework.sln**
+
+### Preview
+
 
 ### Built With
 
