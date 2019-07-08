@@ -20,6 +20,12 @@
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
+## Prerequisites
+To run the game engine on your computer you must have:
+* Visual Studio IDE from [Microsoft Website](https://visualstudio.microsoft.com/vs/).
+
+If you already have it just download the full repository and double click on the **NewTrainingFramework.sln**
+
 ### Built With
 
 * [Visual Studio Comunity 2019](http://www.dropwizard.io/1.0.2/docs/) - free, fully-featured IDE for students, open-source and individual developers.
