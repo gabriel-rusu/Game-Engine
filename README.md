@@ -26,7 +26,9 @@ To run the game engine on your computer you must have:
 
 If you already have it just download the full repository and double click on the **NewTrainingFramework.sln**
 
-### Preview
+### 🎥 Demo / Working <a name = "demo"></a>
+![Working](https://media.giphy.com/media/20NLMBm0BkUOwNljwv/giphy.gif)
+
 
 
 ### Built With
