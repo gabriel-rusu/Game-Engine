@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <img src="https://github.com/RusuGabriel/Game-Engine/blob/master/Resources/games.png">
+  <img src="./Resources/games.png">
 </p>
 
 
